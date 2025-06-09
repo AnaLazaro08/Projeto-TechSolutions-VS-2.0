@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - Technova</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+        body {
+            background-color: #1a0000;
+            color: #fff;
+        }
+        h1 {
+            background-color: #330000;
+            color: #ff4d4d;
+            padding: 20px 0;
+            font-family: 'Bebas Neue';
+            font-size: 70px;
+        }
+        .btn-custom {
+            background-color: #ff4d4d;
+            border: none;
+            color: #000;
+            transition: background-color 0.3s ease;
+        }
+        .btn-custom:hover {
+            background-color: #cc0000;
+            color: #fff;
+        }
+        .navbar {
+            background-color: #330000;
+        }
+        .navbar a {
+            color: #fff !important;
+        }
+        .dropdown-menu {
+            background-color: #4d0000;
+        }
+        .dropdown-item {
+            color: #fff !important;
+        }
+        .dropdown-item:hover {
+            background-color: #800000;
+        }
+        .card {
+            background-color: #660000;
+            color: white;
+        }
+        .card .price {
+            color: #ff4d4d;
+            font-weight: bold;
+        }
+        footer {
+            background-color: #330000;
+            color: #ff4d4d;
+        }
+        .card-img-top {
+            object-fit: cover;
+            height: 200px;
+        }
+        .icon-home {
+    color: #ff4d4d;
+    font-size: 21px;
+    text-decoration: none;
+}
+
+.icon-home:hover {
+    color: #cc0000;
+}
+
+    </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <h1 class="text-center">
+        <img src="/img/Logo Redefinido da Technova.png" height="100px" width="180px" alt="">
+    </h1>
+
+    <!-- Menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a href="/" class="icon-home">
+                <i class="fas fa-home"></i>
+            </a>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="produtosDropdown" role="button" data-bs-toggle="dropdown">
+                            Produtos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="produtosDropdown">
+                            <li><a class="dropdown-item" href="/monitores">Monitores</a></li>
+                            <li><a class="dropdown-item" href="/gabinetes">Gabinetes</a></li>
+                            <li><a class="dropdown-item" href="/acessorios">Acessórios</a></li>
+                            <li><a class="dropdown-item" href="#">Ofertas</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/cadastro" title="Cadastro">
+                            <i class="fa-solid fa-user-plus"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/relatorios" title="Relatórios">
+                            <i class="fa-solid fa-chart-bar"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cards de Produtos dinâmicos -->
+    <main class="container my-5">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <% produtos.forEach(produto => { %>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="<%= produto.imagem %>" class="card-img-top" alt="<%= produto.name %>">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= produto.name %></h5>
+                            <p class="card-text"><%= produto.descricao %></p>
+                            <p class="price">R$ <%= parseFloat(produto.preco).toFixed(2).replace('.', ',') %></p>
+                        </div>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="text-center py-3 mt-auto">
+        © 2025 Technova - Todos os direitos reservados.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

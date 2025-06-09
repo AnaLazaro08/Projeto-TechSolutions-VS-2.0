@@ -1,0 +1,88 @@
+/* Resetando o padding e margin de todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definindo o fundo e a fonte da página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+/* Contêiner que centraliza o formulário */
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+/* Estilos do formulário */
+.form-wrapper {
+    background-color: #222;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para o título */
+h2 {
+    text-align: center;
+    color: #f7a7c5;
+    margin-bottom: 20px;
+}
+
+/* Estilo dos campos de input */
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #ddd;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+}
+
+/* Efeito ao focar nos campos */
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+    outline: none;
+    border-color: #f7a7c5;
+}
+
+/* Estilo do botão */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #f7a7c5;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #f1a0b2;
+}
+
+.submit-btn:active {
+    background-color: #e58c9c;
+}

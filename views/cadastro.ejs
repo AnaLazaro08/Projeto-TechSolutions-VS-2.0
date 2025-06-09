@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tela de Cadastro</title>
+    <style>
+        body {
+            background-color: #1a0000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #330000;
+            padding: 30px 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px #800000;
+            width: 350px;
+        }
+        h2 {
+            color: #ff4d4d;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 6px;
+            color: #ff4d4d;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1.5px solid #4d0000;
+            border-radius: 5px;
+            background-color: #660000;
+            color: #fff;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            border-color: #ff4d4d;
+            outline: none;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 12px 0;
+            background-color: #ff4d4d;
+            border: none;
+            border-radius: 5px;
+            color: #000;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .submit-btn:hover {
+            background-color: #cc0000;
+            color: #fff;
+        }
+        .icon-home {
+    color: #ff4d4d;
+    font-size: 21px;
+    text-decoration: none;
+}
+
+.icon-home:hover {
+    color: #cc0000;
+}
+         .login-btn {
+            width: 100%;
+            padding: 12px 0;
+            background-color: transparent;
+            border: 1.5px solid #ff4d4d;
+            border-radius: 5px;
+            color: #ff4d4d;
+            font-weight: bold;
+            font-size: 15px;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .login-btn:hover {
+            background-color: #cc0000;
+            color: #fff;
+            border-color: #cc0000;
+        }
+</style>
+</head>
+<body>
+    <a href="/" class="icon-home">
+        <i class="fas fa-home"></i>
+    </a>
+    <div class="container">
+        <h2>Cadastro de Usuário</h2>
+        <form action="#" method="POST">
+            <div class="input-group">
+                <label for="name">Nome Completo</label>
+                <input type="text" id="name" name="name" required />
+            </div>
+            <div class="input-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required />
+            </div>
+            <div class="input-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" required />
+            </div>
+            <div class="input-group">
+                <label for="confirm-password">Confirmar Senha</label>
+                <input type="password" id="confirm-password" name="confirm-password" required />
+            </div>
+            <button type="submit" class="submit-btn">Cadastrar</button>   
+        </form>
+        <button type="button" class="login-btn" onclick="window.location.href='/login'">
+            Já tem cadastro? Logar
+          </button>
+          
+    </div>
+
+</body>
+</html>

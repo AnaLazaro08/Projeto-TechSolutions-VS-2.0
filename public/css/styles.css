@@ -1,0 +1,11 @@
+
+/* Definindo o fundo e a fonte da página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #811973;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
