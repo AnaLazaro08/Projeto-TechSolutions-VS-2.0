@@ -64,14 +64,14 @@ exports.updateProduto = (req, res) => {
         preco: req.body.preco
     };
     Produto.updateProduto(ProdutoId, updatedProduto, () => {
-        res.redirect('/');
+        res.redirect('/relatorios');
     });
 };
 
 exports.deleteProduto = (req, res) => {
     const ProdutoId = req.params.id;
     Produto.deleteProduto(ProdutoId, () => {
-        res.redirect('/');
+        res.redirect('/relatorios');
     });
 };
 
